@@ -12,8 +12,8 @@ programs = {
     "⚙️ install telegram                                                          [🛠️ flatpak]": "flatpak install -y flathub org.telegram.desktop",
     "⚙️ install telegram                                                          [🛠️ apt]": "apt install telegram-desktop",
     "⚙️ install 0ad                                                               [🛠️ flatpak]": "flatpak install -y com.play0ad.zeroad",
-    "⚙️ install KVM \"Kernel Virtual Machine\"                                    [🛠️ apt]": "sudo apt install -y qemu-system libvirt-daemon-system",
-    "⚙️ install KVM \"Kernel Virtual Machine\" when installing on a server        [🛠️ apt]": "sudo apt install -y --no-install-recommends qemu-system libvirt-clients libvirt-daemon-system",
+    "⚙️ install KVM \"Kernel Virtual Machine\"                                      [🛠️ apt]": "sudo apt install -y qemu-system libvirt-daemon-system",
+    "⚙️ install KVM \"Kernel Virtual Machine\" when installing on a server          [🛠️ apt]": "sudo apt install -y --no-install-recommends qemu-system libvirt-clients libvirt-daemon-system",
     "⚙️ install snapd and snap store gui                                          [🛠️ apt and snapd]": "sudo apt install -y snapd && sudo snap install snapd && sudo snap install snap-store"
     
 }
