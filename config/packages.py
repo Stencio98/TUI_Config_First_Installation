@@ -35,6 +35,7 @@ programs = {
         "sudo apt install -y virtualbox virtualbox-ext-pack && "
         "sudo apt install -y virtualbox-guest-x11 && "
         "sudo apt install -y virtualbox-guest-utils"
+    ),
     
     "install snapd and snap store gui": "sudo apt install snapd && sudo snap install snapd && sudo snap install snap-store"
     
