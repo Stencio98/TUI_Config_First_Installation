@@ -24,7 +24,6 @@ else:
     for prog in selected:
         print(f"\n\t...⚙️ {prog}...")
         subprocess.run(programs[prog], shell=True)
-
-    print("\n✅  Installation Finished.")
-    print("\n⚠️  Maybe you have to Restart Session.\n\n")
+        
+    print("\n✅  Maybe you have to Restart Session.\n\n")
 
