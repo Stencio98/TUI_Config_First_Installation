@@ -1,9 +1,9 @@
 programs = {
-    "update debian packages (apt)": "apt-get clean && apt-get update && apt-get dist-upgrade -y && apt-get full-upgrade -y && apt-get autoremove -y",
+    " !!! update debian packages (apt)": "apt-get clean && apt-get update && apt-get dist-upgrade -y && apt-get full-upgrade -y && apt-get autoremove -y",
     
-    "update flatpak packages": "sudo flatpak update",
+    "update flatpak packages (you need flatpak installed)": "sudo flatpak update",
     
-    "update snap packages": "sudo snap refresh",
+    "update snap packages (you need snapd installed)": "sudo snap refresh",
     
     "install gedit and gedit's plugins (apt)": "apt install gedit && apt install gedit-plugins",
     
@@ -37,7 +37,7 @@ programs = {
         "sudo apt install -y virtualbox-guest-utils"
     ),
     
-    "install snapd and snap store gui": "sudo apt install snapd && sudo snap install snapd && sudo snap install snap-store"
+    "install snapd and snap store gui (apt and snapd)": "sudo apt install snapd && sudo snap install snapd && sudo snap install snap-store"
     
 }
 
