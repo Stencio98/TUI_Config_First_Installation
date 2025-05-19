@@ -25,19 +25,20 @@ programs = {
     
     "install gedit and gedit's plugins": "apt install -y gedit && apt install -y gedit-plugins",
     
-    "install virtualbox (debian.org)": (
-    	"sudo apt install -y lsb-release && "
-        "echo \"deb http://deb.debian.org/debian $(lsb_release -cs)-backports main contrib\" | sudo tee /etc/apt/sources.list.d/backports.list && "
-        "sudo apt install -y fasttrack-archive-keyring && "
-        "echo \"deb http://fasttrack.debian.net/debian-fasttrack/ $(lsb_release -cs)-fasttrack main contrib\" | sudo tee /etc/apt/sources.list.d/fasttrack.list && "
-        "echo \"deb http://fasttrack.debian.net/debian-fasttrack/ $(lsb_release -cs)-backports-staging main contrib\" | sudo tee -a /etc/apt/sources.list.d/fasttrack.list && "
-        "sudo apt update && "
-        "sudo apt install -y virtualbox virtualbox-ext-pack && "
-        "sudo apt install -y virtualbox-guest-x11 && "
-        "sudo apt install -y virtualbox-guest-utils"
-    ),
-    
     "install snapd and snap store gui (apt and snapd)": "sudo apt install snapd && sudo snap install snapd && sudo snap install snap-store"
     
 }
+
+
+#"install virtualbox (debian.org)": (
+#    	"sudo apt install -y lsb-release && "
+#        "echo \"deb http://deb.debian.org/debian $(lsb_release -cs)-backports main contrib\" | sudo tee /etc/apt/sources.list.d/backports.list && "
+#        "sudo apt install -y fasttrack-archive-keyring && "
+#        "echo \"deb http://fasttrack.debian.net/debian-fasttrack/ $(lsb_release -cs)-fasttrack main contrib\" | sudo tee /etc/apt/sources.list.d/fasttrack.list && "
+#        "echo \"deb http://fasttrack.debian.net/debian-fasttrack/ $(lsb_release -cs)-backports-staging main contrib\" | sudo tee -a /etc/apt/sources.list.d/fasttrack.list && "
+#        "sudo apt update && "
+#        "sudo apt install -y virtualbox virtualbox-ext-pack && "
+#        "sudo apt install -y virtualbox-guest-x11 && "
+#        "sudo apt install -y virtualbox-guest-utils"
+#    ),
 
