@@ -9,6 +9,7 @@ apt-get autoremove -y
 ```
 * copy and paste following commands to prepare environment and run tool:
 ```
+###########################################################
 sudo apt install -y python3-full &&
 python3 -m venv myenv &&
 source myenv/bin/activate &&
@@ -19,6 +20,6 @@ source myenv/bin/activate && python3 scripts/tui.py
 # deactivate environment:
 deactivate
 echo "to remove environment folder:"
-echo "rm -rf myenv
-"
+echo "rm -rf myenv"
+###########################################################
 ```
