@@ -1,6 +1,9 @@
 # TUI_Debian_Configuration
 * make sure you are root user or in a root shell
 * update your system if it is not
+```
+apt-get clean && apt-get update && apt-get dist-upgrade -y && apt-get full-upgrade -y && apt-get autoremove -y
+```
 * copy and paste following commands to prepare environment:
 ```
 sudo apt install -y python3-full &&
