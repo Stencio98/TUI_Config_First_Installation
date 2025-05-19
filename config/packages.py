@@ -5,7 +5,7 @@ programs = {
     
     "🔄 update snap packages [⚠️ you need snapd installed -- 🛠️ snap]": "sudo snap refresh",
     
-    "⚙️ install gedit and gedit's plugins [🛠️ apt]": "apt install gedit && apt install gedit-plugins",
+    "⚙️ install gedit and gedit's plugins [🛠️ apt]": "apt install -y gedit && apt install -y gedit-plugins",
     
     "⚙️ install flatpak with flathub [🛠️ apt]": "sudo apt install -y flatpak && flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo",
     
@@ -25,9 +25,9 @@ programs = {
     
     "⚙️ install gedit and gedit's plugins[🛠️ apt]": "apt install -y gedit && apt install -y gedit-plugins",
 
-    "⚙️ install KVM \"Kernel Virtual Machine\" [🛠️ apt]": "sudo apt install qemu-system libvirt-daemon-system",
+    "⚙️ install KVM \"Kernel Virtual Machine\" [🛠️ apt]": "sudo apt install -y qemu-system libvirt-daemon-system",
 
-    "⚙️ install KVM \"Kernel Virtual Machine\" when installing on a server [🛠️ apt]": "sudo apt install --no-install-recommends qemu-system libvirt-clients libvirt-daemon-system",
+    "⚙️ install KVM \"Kernel Virtual Machine\" when installing on a server [🛠️ apt]": "sudo apt install -y --no-install-recommends qemu-system libvirt-clients libvirt-daemon-system",
     
     "⚙️ install snapd and snap store gui [🛠️ apt and snapd]": "sudo apt install -y snapd && sudo snap install snapd && sudo snap install snap-store"
     
