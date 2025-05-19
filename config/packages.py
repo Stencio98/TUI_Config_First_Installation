@@ -1,5 +1,5 @@
 programs = {
-    "update debian packages (apt)": "apt-get clean && apt-get update && apt-get dist-upgrade && apt-get full-upgrade && apt-get autoremove",
+    "update debian packages (apt)": "apt-get clean && apt-get update && apt-get dist-upgrade -y && apt-get full-upgrade -y && apt-get autoremove -y",
     
     "update flatpak packages": "sudo flatpak update",
     
