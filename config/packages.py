@@ -1,9 +1,9 @@
 programs = {
     " !!! update debian packages (apt)": "apt-get clean && apt-get update && apt-get dist-upgrade -y && apt-get full-upgrade -y && apt-get autoremove -y",
     
-    "update flatpak packages (you need flatpak installed)": "sudo flatpak update",
+    "update flatpak packages (you need flatpak installed -- flatpak)": "sudo flatpak update",
     
-    "update snap packages (you need snapd installed)": "sudo snap refresh",
+    "update snap packages (you need snapd installed -- snap)": "sudo snap refresh",
     
     "install gedit and gedit's plugins (apt)": "apt install gedit && apt install gedit-plugins",
     
@@ -25,7 +25,9 @@ programs = {
     
     "install gedit and gedit's plugins": "apt install -y gedit && apt install -y gedit-plugins",
 
-    "install KVM (Kernel Virtual Machine) (apt)": "sudo apt install qemu-system libvirt-daemon-system",
+    "install KVM \"Kernel Virtual Machine\" (apt)": "sudo apt install qemu-system libvirt-daemon-system",
+
+    "install KVM \"Kernel Virtual Machine\" when installing on a server (apt)": "sudo apt install --no-install-recommends qemu-system libvirt-clients libvirt-daemon-system",
     
     "install snapd and snap store gui (apt and snapd)": "sudo apt install snapd && sudo snap install snapd && sudo snap install snap-store"
     
