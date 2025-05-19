@@ -20,7 +20,7 @@ if not selected:
     print("❌ No package selected")
 else:
     for prog in selected:
-        print(f"\n➡️  Installing: {prog}...")
+        print(f"\n➡️ {prog}...")
         subprocess.run(programs[prog], shell=True)
 
     print("\n✅ Installation Finished.")
