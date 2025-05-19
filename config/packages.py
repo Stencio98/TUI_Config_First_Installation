@@ -1,20 +1,20 @@
 programs = {
-    "🔄 update debian packages [🛠️ apt]": "apt-get clean && apt-get update && apt-get dist-upgrade -y && apt-get full-upgrade -y && apt-get autoremove -y",
-    "🔄 update flatpak packages                         [⚠️ you need flatpak installed -- 🛠️ flatpak]": "sudo flatpak update -y",
-    "🔄 update snap packages                            [⚠️ you need snapd installed -- 🛠️ snap]": "sudo snap refresh",
-    "⚙️ install gedit and gedit's plugins               [🛠️ apt]": "apt install -y gedit && apt install -y gedit-plugins",
-    "⚙️ install flatpak with flathub                    [🛠️ apt]": "sudo apt install -y flatpak && flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo",
-    "⚙️ install flatpak-plugin-gnome                    [🛠️ apt]": "sudo apt install -y gnome-software-plugin-flatpak",
-    "⚙️ install flatpak-plugin-KDE_Plasma [🛠️ apt]": "sudo apt install -y plasma-discover-backend-flatpak",
-    "⚙️ install discord [🛠️ flatpak]": "flatpak install -y flathub com.discordapp.Discord",
-    "⚙️ install spotify [🛠️ flatpak]": "flatpak install -y flathub com.spotify.Client",
-    "⚙️ install steam [🛠️ flatpak]": "flatpak install -y flathub com.valvesoftware.Steam",
-    "⚙️ install telegram [🛠️ flatpak]": "flatpak install -y flathub org.telegram.desktop",
-    "⚙️ install telegram [🛠️ apt]": "apt install telegram-desktop",
-    "⚙️ install 0ad [🛠️ flatpak]": "flatpak install -y com.play0ad.zeroad",
-    "⚙️ install KVM \"Kernel Virtual Machine\" [🛠️ apt]": "sudo apt install -y qemu-system libvirt-daemon-system",
-    "⚙️ install KVM \"Kernel Virtual Machine\" when installing on a server [🛠️ apt]": "sudo apt install -y --no-install-recommends qemu-system libvirt-clients libvirt-daemon-system",
-    "⚙️ install snapd and snap store gui [🛠️ apt and snapd]": "sudo apt install -y snapd && sudo snap install snapd && sudo snap install snap-store"
+    "🔄 update debian packages        [🛠️ apt]": "apt-get clean && apt-get update && apt-get dist-upgrade -y && apt-get full-upgrade -y && apt-get autoremove -y",
+    "🔄 update flatpak packages        [⚠️ you need flatpak installed -- 🛠️ flatpak]": "sudo flatpak update -y",
+    "🔄 update snap packages        [⚠️ you need snapd installed -- 🛠️ snap]": "sudo snap refresh",
+    "⚙️ install gedit and gedit's plugins        [🛠️ apt]": "apt install -y gedit && apt install -y gedit-plugins",
+    "⚙️ install flatpak with flathub        [🛠️ apt]": "sudo apt install -y flatpak && flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo",
+    "⚙️ install flatpak-plugin-gnome        [🛠️ apt]": "sudo apt install -y gnome-software-plugin-flatpak",
+    "⚙️ install flatpak-plugin-KDE_Plasma        [🛠️ apt]": "sudo apt install -y plasma-discover-backend-flatpak",
+    "⚙️ install discord        [🛠️ flatpak]": "flatpak install -y flathub com.discordapp.Discord",
+    "⚙️ install spotify        [🛠️ flatpak]": "flatpak install -y flathub com.spotify.Client",
+    "⚙️ install steam        [🛠️ flatpak]": "flatpak install -y flathub com.valvesoftware.Steam",
+    "⚙️ install telegram        [🛠️ flatpak]": "flatpak install -y flathub org.telegram.desktop",
+    "⚙️ install telegram        [🛠️ apt]": "apt install telegram-desktop",
+    "⚙️ install 0ad        [🛠️ flatpak]": "flatpak install -y com.play0ad.zeroad",
+    "⚙️ install KVM \"Kernel Virtual Machine\"        [🛠️ apt]": "sudo apt install -y qemu-system libvirt-daemon-system",
+    "⚙️ install KVM \"Kernel Virtual Machine\" when installing on a server        [🛠️ apt]": "sudo apt install -y --no-install-recommends qemu-system libvirt-clients libvirt-daemon-system",
+    "⚙️ install snapd and snap store gui        [🛠️ apt and snapd]": "sudo apt install -y snapd && sudo snap install snapd && sudo snap install snap-store"
     
 }
 
