@@ -1,7 +1,7 @@
 programs = {
-    "🔄 update debian packages                                                    [🛠️ apt]": "apt-get clean && apt-get update && apt-get dist-upgrade -y && apt-get full-upgrade -y && apt-get autoremove -y",
-    "🔄 update flatpak packages                                                   [⚠️ you need flatpak installed -- 🛠️ flatpak]": "sudo flatpak update -y",
-    "🔄 update snap packages                                                      [⚠️ you need snapd installed -- 🛠️ snap]": "sudo snap refresh",
+    "🔄 update debian packages                                                   [🛠️ apt]": "apt-get clean && apt-get update && apt-get dist-upgrade -y && apt-get full-upgrade -y && apt-get autoremove -y",
+    "🔄 update flatpak packages                                                  [⚠️ you need flatpak installed -- 🛠️ flatpak]": "sudo flatpak update -y",
+    "🔄 update snap packages                                                     [⚠️ you need snapd installed -- 🛠️ snap]": "sudo snap refresh",
     "⚙️ install gedit and gedit's plugins                                         [🛠️ apt]": "apt install -y gedit && apt install -y gedit-plugins",
     "⚙️ install flatpak with flathub                                              [🛠️ apt]": "sudo apt install -y flatpak && flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo",
     "⚙️ install flatpak-plugin-gnome                                              [🛠️ apt]": "sudo apt install -y gnome-software-plugin-flatpak",
