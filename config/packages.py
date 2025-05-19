@@ -23,7 +23,7 @@ programs = {
     
     "install telegram (apt)": "apt install telegram-desktop",
     
-    "install gedit and gedit's plugins": "apt install gedit && apt install gedit-plugins",
+    "install gedit and gedit's plugins": "apt install -y gedit && apt install -y gedit-plugins",
     
     "install virtualbox (debian.org)": (
     	"sudo apt install -y lsb-release && "
