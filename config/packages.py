@@ -24,6 +24,8 @@ programs = {
     "install telegram (apt)": "apt install telegram-desktop",
     
     "install gedit and gedit's plugins": "apt install -y gedit && apt install -y gedit-plugins",
+
+    "install KVM (Kernel Virtual Machine)": "sudo apt install qemu-system libvirt-daemon-system",
     
     "install snapd and snap store gui (apt and snapd)": "sudo apt install snapd && sudo snap install snapd && sudo snap install snap-store"
     
