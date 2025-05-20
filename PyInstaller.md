@@ -3,8 +3,14 @@ _it makes a script or exe... that contains all app need
 it work also without installing python on a target computer_
 * how to _make_ script for linux:
 ```
+# do you have python full?
+sudo apt install -y python3-full
+
 # we must be in an environment
 python3 -m venv myenv && source myenv/bin/activate
+
+# pyinstaller need that library to "screenshot"
+pip install questionary
 
 # install PyInstaller
 pip install pyinstaller
