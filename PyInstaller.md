@@ -16,3 +16,13 @@ pyinstaller --onefile hello.py
 dict/hello (Linux/Mac)
 dict/hello.exe (windows)
 ```
+* if you run into that error:
+```
+ERROR: On Linux, objdump is required. It is typically provided by the 'binutils' package installable via your Linux distribution's package manager.
+
+```
+* install binutils
+```
+sudo apt update
+sudo apt install binutils
+```
