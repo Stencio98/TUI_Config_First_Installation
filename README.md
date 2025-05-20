@@ -17,7 +17,7 @@ source myenv/bin/activate &&
 pip install questionary
 
 # now run tool:
-source myenv/bin/activate && python3 /tui.py
+source myenv/bin/activate && python3 tui.py
 # deactivate environment:
 deactivate
 echo "to remove environment folder:"

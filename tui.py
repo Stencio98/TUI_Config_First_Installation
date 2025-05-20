@@ -7,15 +7,12 @@ import packages
 
 from packages import programs
 
-choices = [Choice(prog, value=prog) for prog in programs.keys()]
+choices = [
+    Choice(prog, value=prog) for prog in programs.keys()
+]
 
-print("\n")
-print("\033[1m* apt packages -->\033[0m ⚪")
-print("\033[1m* flatpak packages -->\033[0m 🔵")
-print("\033[1m* snap packages --> \033[0m 🔴")
-print("\033[5m* Make sure that snapd or flatpak are installed (first 3 rows) before select a snap or flatpak package\033[0m")
 selected = questionary.checkbox(
-    "",
+    "Make sure that snapd or flatpak are installed (first 3 rows) before select a snap or flatpak package\n⚪  apt packages\n🔵  flatpak packages\n🔴  snap packages\n",
     choices=choices
 ).ask()
 
@@ -26,5 +23,5 @@ else:
         print(f"\n\t🔧 ⚙️  🛠️  {prog}")
         subprocess.run(programs[prog], shell=True)
         
-    print("\n✅  Maybe you have to Restart Session.\n\n")
+    print("\n✅  \033[5mMaybe you have to Restart Session.\033[0m\n\n")
 
