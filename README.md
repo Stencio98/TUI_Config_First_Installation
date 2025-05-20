@@ -1,4 +1,5 @@
 # TUI_Debian_Configuration
+_use this command if you are not using PyInstaller script_
 * make sure you are root user or in a root shell
 * update your system if it is not
 ```
