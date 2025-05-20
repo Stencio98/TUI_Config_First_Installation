@@ -3,11 +3,7 @@ import subprocess
 import sys
 import os
 from questionary import Choice
-
-# Add folder config to search path
-current_dir = os.path.dirname(__file__)                  # current directory
-config_dir = os.path.abspath(os.path.join(current_dir, '..', 'config'))  # absolute path ../config
-sys.path.insert(0, config_dir)                           # insert 'config' at top of module research list
+import packages
 
 from packages import programs
 
