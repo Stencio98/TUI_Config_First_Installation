@@ -14,7 +14,7 @@ from packages import programs
 choices = [Choice(prog, value=prog) for prog in programs.keys()]
 
 selected = questionary.checkbox(
-    "\n\n\nSelect packages that will be installed:\n    * apt packages --> ⚪\n    * flatpak packages --> 🔵\n    * snap packages --> 🔴\n\n⚠️  Before install snap or/and flatpak package\nmake sure that snapd or/and flatpak are installed ⚠️ \n\n",
+    "\n\n\nSelect packages that will be installed:\n    * apt packages --> ⚪\n    * flatpak packages --> 🔵\n    * snap packages --> 🔴\n\n⚠️ ⚠️ ⚠️\nBefore install/update snap or/and flatpak \npackage make sure that snapd or/and flatpak \nare installed (first 3 rows)\n\n",
     choices=choices
 ).ask()
 
@@ -22,7 +22,7 @@ if not selected:
     print("❌ No package selected")
 else:
     for prog in selected:
-        print(f"\n\t...⚙️ {prog}...")
+        print(f"\n\t🔧 ⚙️  🛠️  {prog}")
         subprocess.run(programs[prog], shell=True)
         
     print("\n✅  Maybe you have to Restart Session.\n\n")
