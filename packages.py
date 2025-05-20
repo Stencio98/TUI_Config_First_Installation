@@ -10,6 +10,8 @@ programs = {
     "⚪  psensor (gui)": "apt install -y psensor",
     "⚪  acpi (battery percentage laptop (terminal command))": "apt install -y acpi",
     "⚪  openbox": "apt install -y openbox",
+    "⚪  tree": "apt install -y tree",
+    "⚪  fish": "apt install -y fish",
     "⚪  flatpak-plugin-gnome": "sudo apt install -y gnome-software-plugin-flatpak",
     "⚪  flatpak-plugin-KDE_Plasma": "sudo apt install -y plasma-discover-backend-flatpak",
     "🔵  discord": "flatpak install -y flathub com.discordapp.Discord",
