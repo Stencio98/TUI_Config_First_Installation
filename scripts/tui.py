@@ -13,8 +13,13 @@ from packages import programs
 
 choices = [Choice(prog, value=prog) for prog in programs.keys()]
 
+print("\n")
+print("\033[1m* apt packages -->\033[0m ⚪")
+print("\033[1m* flatpak packages -->\033[0m 🔵")
+print("\033[1m* snap packages --> \033[0m 🔴")
+print("\033[5m* Make sure that snapd or flatpak are installed (first 3 rows) before select a snap or flatpak package\033[0m")
 selected = questionary.checkbox(
-    "\n\n\nSelect packages that will be installed:\n    * apt packages --> ⚪\n    * flatpak packages --> 🔵\n    * snap packages --> 🔴\n\n⚠️ ⚠️ ⚠️\nBefore install/update snap or/and flatpak \npackage make sure that snapd or/and flatpak \nare installed (first 3 rows)\n\n",
+    "",
     choices=choices
 ).ask()
 

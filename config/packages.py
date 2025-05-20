@@ -9,6 +9,7 @@ programs = {
     "⚪  lm-sensors": "apt install -y lm-sensors",
     "⚪  psensor (gui)": "apt install -y psensor",
     "⚪  acpi (battery percentage laptop (terminal command))": "apt install -y acpi",
+    "⚪  openbox": "apt install -y openbox",
     "⚪  flatpak-plugin-gnome": "sudo apt install -y gnome-software-plugin-flatpak",
     "⚪  flatpak-plugin-KDE_Plasma": "sudo apt install -y plasma-discover-backend-flatpak",
     "🔵  discord": "flatpak install -y flathub com.discordapp.Discord",
