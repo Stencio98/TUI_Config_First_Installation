@@ -14,7 +14,7 @@ from packages import programs
 choices = [Choice(prog, value=prog) for prog in programs.keys()]
 
 selected = questionary.checkbox(
-    "\n\n\nSelect packages that will be installed:\n    apt packages --> ⚪\n    flatpak packages --> 🔵\n    snap packages --> 🔴\n\nBefore install snap or/and flatpak package\nmake sure that snapd or/and flatpak are installed ⚠️\n\n",
+    "\n\n\nSelect packages that will be installed:\n    * apt packages --> ⚪\n    * flatpak packages --> 🔵\n    * snap packages --> 🔴\n\n⚠️  Before install snap or/and flatpak package\nmake sure that snapd or/and flatpak are installed ⚠️ \n\n",
     choices=choices
 ).ask()
 
