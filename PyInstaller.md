@@ -16,7 +16,7 @@ pip install questionary
 pip install pyinstaller
 
 # make one executable file
-pyinstaller --onefile hello.py
+pyinstaller --onefile tui.py
 
 # the file (script) that we want is in:
 dict/hello (Linux/Mac)
