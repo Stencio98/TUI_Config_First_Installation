@@ -12,7 +12,7 @@ choices = [
 ]
 
 selected = questionary.checkbox(
-    "Make sure that snapd or flatpak are installed (first 3 rows) before select a snap or flatpak package\n⚪  apt packages\n🔵  flatpak packages\n🔴  snap packages\n",
+    "Make sure that snapd or flatpak are installed (first 3 rows) before select a snap or flatpak",
     choices=choices
 ).ask()
 
