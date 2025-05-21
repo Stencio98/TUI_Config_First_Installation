@@ -15,6 +15,7 @@ programs = {
     "(apt)  flatpak-plugin-gnome": "sudo apt install -y gnome-software-plugin-flatpak",
     "(apt)  flatpak-plugin-KDE_Plasma": "sudo apt install -y plasma-discover-backend-flatpak",
     "(flatpak)  discord": "flatpak install -y flathub com.discordapp.Discord",
+    "(flatpak)  chromium": "flatpak install -y flathub org.chromium.Chromium",
     "(flatpak)  Intellij Community": "flatpak install -y com.jetbrains.IntelliJ-IDEA-Community",
     "(flatpak)  Android Studio": "flatpak install -y com.google.AndroidStudio",
     "(flatpak)  Visual Studio Code": "flatpak install -y com.visualstudio.code",
