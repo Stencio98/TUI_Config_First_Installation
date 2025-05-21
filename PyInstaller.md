@@ -7,7 +7,8 @@ it work also without installing python on a target computer_
 sudo apt install -y python3-full
 
 # we must be in an environment
-python3 -m venv myenv && source myenv/bin/activate
+python3 -m venv myenv 
+source myenv/bin/activate
 
 # pyinstaller need that library to "screenshot"
 pip install questionary
@@ -17,8 +18,10 @@ pip install pyinstaller
 
 # make one executable file
 pyinstaller --onefile tui.py
+```
 
-# the file (script) that we want is in:
+* the file (script) that we want is in:
+```
 dict/hello (Linux/Mac)
 dict/hello.exe (windows)
 ```

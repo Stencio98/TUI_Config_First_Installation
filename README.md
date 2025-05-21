@@ -10,7 +10,7 @@ apt-get autoremove -y
 ```
 * copy and paste following commands to prepare environment and run tool:
 ```
-###########################################################
+# prepare environment and install questionary
 sudo apt install -y python3-full &&
 python3 -m venv myenv &&
 source myenv/bin/activate &&
@@ -20,7 +20,7 @@ pip install questionary
 source myenv/bin/activate && python3 tui.py
 # deactivate environment:
 deactivate
-echo "to remove environment folder:"
-echo "rm -rf myenv"
-###########################################################
+
+# remove environment folder
+rm -rf myenv"
 ```
