@@ -25,7 +25,7 @@ programs = {
     "(flatpak)  0ad": "flatpak install -y com.play0ad.zeroad",
     "(apt)  KVM \"Kernel Virtual Machine\" Desktop use 💻": "sudo apt install -y qemu-system libvirt-daemon-system",
     "(apt)  KVM \"Kernel Virtual Machine\" Server use 💾": "sudo apt install -y --no-install-recommends qemu-system libvirt-clients libvirt-daemon-system",
-    "(snap) Microsoft Teams": "sudo snap install teams-for-linux"
-
+    "(snap) Microsoft Teams": "sudo snap install teams-for-linux",
+    "(apt) VirtualBox": " sudo apt install -y virtualbox && sudo apt install -y virtualbox-ext-pack"
 }
 
