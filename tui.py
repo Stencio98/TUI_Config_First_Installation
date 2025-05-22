@@ -3,15 +3,23 @@ import subprocess
 import sys
 import os
 from questionary import Choice
+from questionary import Separator
 from questionary import Style
 
 import packages
 
 from packages import programs
 
-choices = [
-    Choice(prog, value=prog) for prog in programs.keys()
-]
+#choices = [
+#    Choice(prog, value=prog) for prog in programs.keys()
+#]
+
+choices = []
+for category, progs in programs.items():
+    choices.append(Separator(f"\n{category}"))
+    for prog in progs.keys():
+        choices.append(Choice(prog, value=prog))
+
 
 
 orange_heat = Style([
@@ -24,7 +32,7 @@ orange_heat = Style([
 
 
 selected = questionary.checkbox(
-    "Make sure that snapd or flatpak are installed (first 3 rows) before select a snap or flatpak",
+    "Make sure that snapd or flatpak are installed before select a snap or flatpak (first 2 rows)\n--> The flatpak and snapd installation command will also update apt\n",
     choices=choices,
     style=orange_heat
 ).ask()
@@ -33,8 +41,10 @@ if not selected:
     print("❌ No package selected")
 else:
     for prog in selected:
-        print(f"\n\t🔧 ⚙️  🛠️  {prog}")
-        subprocess.run(programs[prog], shell=True)
-        
+    	for category, progs in programs.items():
+    		if prog in progs:
+        		print(f"\n\t🔧 ⚙️  🛠️  {prog}")
+        		subprocess.run(programs[prog], shell=True)
+        		break
     print("\n✅  \033[1mMaybe you have to Restart Session.\033[0m\n\n")
 
