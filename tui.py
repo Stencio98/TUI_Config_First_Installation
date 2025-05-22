@@ -41,10 +41,15 @@ if not selected:
     print("❌ No package selected")
 else:
     for prog in selected:
+    	found = False
     	for category, progs in programs.items():
-    		if prog in progs:
-        		print(f"\n\t🔧 ⚙️  🛠️  {prog}")
-        		subprocess.run(programs[prog], shell=True)
-        		break
+    	    if prog in progs:
+    	        print(f"\n\t🔧 ⚙️  🛠️  {prog}")
+    	        subprocess.run(progs[prog], shell=True)
+    	        found = True
+    	        break
+    	if not found:
+    	    print(f"❌ Program {prog} not found!")
+
     print("\n✅  \033[1mMaybe you have to Restart Session.\033[0m\n\n")
 
