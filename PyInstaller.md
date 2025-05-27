@@ -1,4 +1,4 @@
-# Use PyInstaller to don't use an environment and libraries
+# (Beta) Use PyInstaller to don't use an environment and libraries
 _it makes a script or exe... that contains all app need
 it work also without installing python on a target computer_
 * how to _make_ script for linux:
@@ -34,4 +34,12 @@ ERROR: On Linux, objdump is required. It is typically provided by the 'binutils'
 ```
 sudo apt update
 sudo apt install binutils
+```
+
+# errors (needed analysis)
+* fedora (**maybe** script must be done on fedora and run on it... if you make it on debian and run fedora could not work):
+```
+🔧 ⚙️  🛠️  0ad
+flatpak: /tmp/_MEIQU7g02/libssl.so.3: version `OPENSSL_3.2.0' not found (required by /lib64/libcurl.so.4)
+
 ```
