@@ -1,6 +1,5 @@
 *You can use script made with Pyinstaller instead of following commands*
-# TUI_Debian_Configuration
-# Debian / Ubuntu based
+# TUI_Debian_Configuration -- Debian / Ubuntu based
 * make sure you are root user or in a root shell
 * update your system if it is not
 ```
@@ -27,8 +26,7 @@ deactivate
 rm -rf myenv"
 ```
 
-# TUI_Debian_Configuration
-# Fedora
+# TUI_Debian_Configuration -- Fedora
 * make sure you are root user or in a root shell
 * update your system if it is not
 ```
