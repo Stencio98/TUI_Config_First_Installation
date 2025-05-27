@@ -10,9 +10,29 @@ import packages
 
 from packages import programs
 
-#choices = [
-#    Choice(prog, value=prog) for prog in programs.keys()
-#]
+orange_heat = Style([
+    ("qmark", "fg:#FFA500 bold"),
+    ("question", "fg:#FF8C00 bold"),
+    ("selected", "fg:#FFD700"),
+    ("pointer", "fg:#FF4500 bold"),
+    ("instruction", "fg:#FF6347"),
+])
+
+package_managers = questionary.checkbox(
+    "What packages do you can/want manage?",
+    choices=[
+        Choice("APT", value="apt"),
+        Choice("Flatpak", value="flatpak"),
+        Choice("DNF", value="dnf"),
+    ],
+    style=orange_heat
+).ask()
+
+if not package_managers:
+    print("❌ No manager selected.")
+    exit(0)
+
+############################
 
 choices = []
 for category, progs in programs.items():
@@ -22,13 +42,7 @@ for category, progs in programs.items():
 
 
 
-orange_heat = Style([
-    ("qmark", "fg:#FFA500 bold"),
-    ("question", "fg:#FF8C00 bold"),
-    ("selected", "fg:#FFD700"),
-    ("pointer", "fg:#FF4500 bold"),
-    ("instruction", "fg:#FF6347"),
-])
+
 
 
 selected = questionary.checkbox(
@@ -39,6 +53,7 @@ selected = questionary.checkbox(
 
 if not selected:
     print("❌ No package selected")
+    exit(0)
 else:
     for prog in selected:
     	found = False
