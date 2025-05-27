@@ -1,4 +1,4 @@
-*You can use script made with Pyinstaller instead of following commands*
+*You can use script made with Pyinstaller instead of following commands.. but this commands sequence maybe work better*
 # TUI_Debian_Configuration -- Debian / Ubuntu based
 * make sure you are root user or in a root shell
 * update your system if it is not
