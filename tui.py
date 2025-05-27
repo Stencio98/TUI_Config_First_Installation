@@ -41,7 +41,7 @@ for manager in package_managers:
 
 choices = []
 for manager, programs in program_sources.items():
-    choices.append(Separator(f"\n🎛️  {manager.upper()}"))
+    #choices.append(Separator(f"\n🎛️  {manager.upper()}"))
     for category, progs in programs.items():
         choices.append(Separator(f"\n{category}"))
         for prog in progs.keys():
