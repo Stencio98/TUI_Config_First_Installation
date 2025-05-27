@@ -42,7 +42,7 @@ python3 -m venv myenv &&
 source myenv/bin/activate &&
 pip install questionary
 
-# onow run tool:
+# now run tool:
 source myenv/bin/activate && python3 tui.py
 
 # deactivate environment:
