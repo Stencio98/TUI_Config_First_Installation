@@ -1,4 +1,3 @@
-#apt-get clean && apt-get update && apt-get dist-upgrade -y && apt-get full-upgrade -y && apt-get autoremove -y &&
 programs = {
 	"📦 flatpak packages:": {
 		"🔄 update flatpak -- update flatpak packages ": "sudo flatpak update -y",
