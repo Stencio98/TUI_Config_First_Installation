@@ -1,38 +1,54 @@
 #!/bin/bash
-echo "Welcome to Fedora Script Installation"
-echo "First of all we need to update dnf packages..."
-sleep 1
+
+#variables to make visible the error line
+bold='\e[1m'
+err='\a\033[7m ERROR:'
+reset='\033[0m'
+
+echo -e "${bold}Welcome to Fedora Script Installation\nFirst of all we need to update dnf packages...${reset}"
+sleep 2
 
 # First, clean the dnf cache
-if ! dnf clean all; then
-    echo "ERROR: dnf clean all"
-    exit 1
+dnf clean all
+if [ "$?" -ne 0 ]; then
+	echo -e "${err} dnf clean all ${reset}"
+	exit 1
 fi
 
 # Then, update the system
-if ! dnf update -y; then
-    echo "ERROR: dnf update"
-    exit 1
+dnf update -y
+if [ "$?" -ne 0 ]; then
+	echo -e "${err} dnf update ${reset}"
+	exit 1
 fi
 
 # Upgrade with refresh
-if ! dnf upgrade --refresh -y; then
-    echo "ERROR: dnf upgrade --refresh"
-    exit 1
+dnf upgrade --refresh -y
+if [ "$?" -ne 0 ]; then
+	echo -e "${err} dnf upgrade --refresh ${reset}"
+	exit 1
 fi
 
 # Remove unnecessary dependencies
-if ! dnf autoremove -y; then
-    echo "ERROR: dnf autoremove"
-    exit 1
+dnf autoremove -y
+if [ "$?" -ne 0 ]; then
+	echo -e "${err} dnf autoremove ${reset}"
+	exit 1
 fi
+echo -e "${bold} \ndnf: System updated and cleaned successfully. ${reset}"
 
-echo -e "\e[1mdnf: System updated and cleaned successfully.\e[0m"
+echo "\nDo you want to continue installation? y/n"
+read -n1 INPUT
+if [ "$INPUT" = "y" || "$INPUT" = "Y" ]; then
+	echo "\nDo you want to install dnf packages? y/n"
+	read -n1 INPUT
+	if [ "$INPUT" = "y" || "$INPUT" = "Y" ]; then
+		echo "\n"
+		#apre script dnf
+	fi	
 
-echo "Do you want to continue installation? y/n"
-read -n1 keyboard_IN
 
-
+fi
 
 
 
