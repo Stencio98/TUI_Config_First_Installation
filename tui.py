@@ -16,14 +16,19 @@ orange_heat = Style([
 ])
 
 package_managers = questionary.checkbox(
-        "What packages do you can/want manage?",
-        choices=[
-		Choice("APT", value="apt"),
-                Choice("Flatpak", value="flatpak"),
-                Choice("DNF", value="dnf"),
-        ],
+        "What packages do you can/want manage?\nCheck what packages is using your distro (fedora/debian base, ecc...)",
+	choices=[
+		"apt (Debian/Ubuntu Base)",
+		"flatpak (preinstalled in Linux Mint, Fedora...)",
+		"dnf (Fedora Base)",
+		"snap"
+	],
         style=orange_heat
 ).ask()
+
+if "snap" in package_managers:
+	print("\033[1mSNAP? REALLY? Come on bro\033[0m")
+	package_managers.remove("snap")
 
 if not package_managers:
         print("❌ No manager selected.")
@@ -32,18 +37,11 @@ if not package_managers:
 
 program_sources = {}
 
-for manager in package_managers:
-        try:
-                module = importlib.import_module(f"{manager}_packages")
-                program_sources[manager] = module.programs
-        except ModuleNotFoundError:
-                print(f"❌ module {manager}_packages nont found.")
+if "apt" in 
 
 choices = []
 for manager, programs in program_sources.items():
-        #choices.append(Separator(f"\n🎛️  {manager.upper()}"))
         for category, progs in programs.items():
-                choices.append(Separator(f"\n{category}"))
                 for prog in progs.keys():
                         choices.append(Choice(f"{prog} ({manager})", value=(prog, manager)))
 
@@ -60,7 +58,7 @@ if not selected:
 for prog, manager in selected:
         programs = program_sources[manager]
         found = False
-        
+
         for category, progs in programs.items():
                 if prog in progs:
                         print(f"\n\t🔧 ⚙️  🛠️  {prog} ({manager.upper()})")
