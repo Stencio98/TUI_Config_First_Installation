@@ -35,45 +35,26 @@ if [ "$?" -ne 0 ]; then
 	echo -e "${err} dnf autoremove ${reset}"
 	exit 1
 fi
-echo -e "${bold} \ndnf: System updated and cleaned successfully. ${reset}"
+echo -e "${bold} dnf: System updated and cleaned successfully. ${reset}"
 
-echo "\nDo you want to continue installation? y/n"
-read -n1 INPUT
-if [ "$INPUT" = "y" || "$INPUT" = "Y" ]; then
-	echo "\nDo you want to install dnf packages? y/n"
-	read -n1 INPUT
-	if [ "$INPUT" = "y" || "$INPUT" = "Y" ]; then
-		echo "\n"
-		#apre script dnf
+echo -e "\nDo you want to continue installation? y/n"
+read -n1 -s INPUT
+if [[ "$INPUT" = "y" || "$INPUT" = "Y" ]]; then
+	echo -e "Do you want to install dnf packages? y/n"
+	read -n1 -s INPUT
+	if [[ "$INPUT" = "y" || "$INPUT" = "Y" ]]; then
+		#open script dnf
+		sh fedora_dnf.sh
+	fi
+	
+	echo -e "\nDo you want to install flatpak packages? y/n"
+	read -n1 -s INPUT
+	if [[ "$INPUT" = "y" || "$INPUT" = "Y" ]]; then
+		#open script flatpak
+		sh fedora_flatpak.sh
 	fi	
-
-
 fi
 
+echo -e "${bold}Have a nice Linux experience!!"
+exit 0
 
-
-
-##install dnf programs
-#dnf install -y fastfetch &&
-
-## make sure flatpak exist
-#dnf install -y flatpak && flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo &&
-
-##update flatpak packages
-#sudo flatpak update -y &&
-##install flatpak programs
-##flatpak install -y flathub org.kde.kate &&
-#flatpak install -y flathub com.discordapp.Discord &&
-#flatpak install -y flathub org.chromium.Chromium &&
-#flatpak install -y flathub com.jetbrains.IntelliJ-IDEA-Community &&
-#flatpak install -y flathub com.google.AndroidStudio &&
-#flatpak install -y flathub com.visualstudio.code &&
-#flatpak install -y flathub com.github.IsmaelMartinez.teams_for_linux &&
-#flatpak install -y flathub com.spotify.Client &&
-#flatpak install -y flathub com.valvesoftware.Steam &&
-#flatpak install -y flathub org.telegram.desktop &&
-#flatpak install -y flathub com.play0ad.zeroad &&
-
-
-## all good
-#echo "installation finished"
