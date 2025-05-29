@@ -58,6 +58,7 @@ if [[ "$INPUT" = "y" || "$INPUT" = "Y" ]]; then
 	exec_command flatpak install -y flathub org.telegram.desktop
 	exec_command flatpak install -y flathub com.play0ad.zeroad
 	exec_command flatpak install -y flathub me.timschneeberger.jdsp4linux
+	exec_command flatpak install -y flathub org.gnome.gedit
 fi
 
 echo -e "${bold} Installation complete. Consider rebooting your system. ${reset}"
