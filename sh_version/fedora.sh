@@ -38,23 +38,27 @@ echo -e "${bold} Prepare Flatpak ${reset}"
 exec_command dnf install -y flatpak
 exec_command flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
+echo -e "${bold} Update Flatpak packages ${reset}"
 exec_command flatpak update
- 
-if [[ "$INPUT" ]]
 
-echo -e "${bold} All Ready.. Installation Flatpak Packages and dnf packages.. ${reset}"
-exec_command flatpak install -y flathub org.kde.kate
-exec_command flatpak install -y flathub com.discordapp.Discord
-exec_command flatpak install -y flathub org.chromium.Chromium
-exec_command flatpak install -y flathub com.jetbrains.IntelliJ-IDEA-Community
-exec_command flatpak install -y flathub com.google.AndroidStudio
-exec_command flatpak install -y flathub com.visualstudio.code
-exec_command flatpak install -y flathub com.github.IsmaelMartinez.teams_for_linux
-exec_command flatpak install -y flathub com.spotify.Client
-exec_command flatpak install -y flathub com.valvesoftware.Steam
-exec_command flatpak install -y flathub org.telegram.desktop
-exec_command flatpak install -y flathub com.play0ad.zeroad
-exec_command flatpak install -y flathub me.timschneeberger.jdsp4linux
+echo -e "\n${bold} dnf & flatpak are updated\nDo you want to continue and install additional programs? [y/n] ${reset}"
+read -n1 -s INPUT
+
+if [[ "$INPUT" = "y" || "$INPUT" = "Y" ]]; then
+	echo -e "${bold} All Ready.. Installation Flatpak Packages and dnf packages.. ${reset}"
+	exec_command flatpak install -y flathub org.kde.kate
+	exec_command flatpak install -y flathub com.discordapp.Discord
+	exec_command flatpak install -y flathub org.chromium.Chromium
+	exec_command flatpak install -y flathub com.jetbrains.IntelliJ-IDEA-Community
+	exec_command flatpak install -y flathub com.google.AndroidStudio
+	exec_command flatpak install -y flathub com.visualstudio.code
+	exec_command flatpak install -y flathub com.github.IsmaelMartinez.teams_for_linux
+	exec_command flatpak install -y flathub com.spotify.Client
+	exec_command flatpak install -y flathub com.valvesoftware.Steam
+	exec_command flatpak install -y flathub org.telegram.desktop
+	exec_command flatpak install -y flathub com.play0ad.zeroad
+	exec_command flatpak install -y flathub me.timschneeberger.jdsp4linux
+fi
 
 echo -e "${bold} Installation complete. Consider rebooting your system. ${reset}"
-
+echo -e "${bold} Have a nice Linux experience!! ${reset}"
