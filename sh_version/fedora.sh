@@ -16,7 +16,7 @@ function exec_command(){
 	#sudo "$*" --> see difference between $@ e $*
 	if [ "$?" -ne 0 ]; then
 		echo -e "${err} $@ ${reset}"
-		echo -e "\n${bold} Do you want to end installation now? [y/n] ${reset}"
+		echo -e "\n${bold} Do you want to QUIT installation now? [y/n] ${reset}"
 		read -n1 -s INPUT
 		if [[ "$INPUT" = "y" || "$INPUT" = "Y" ]]; then
 			exit 0;
