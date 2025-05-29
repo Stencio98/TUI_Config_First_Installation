@@ -39,6 +39,7 @@ exec_command dnf install -y flatpak
 exec_command flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
 echo -e "${bold} Installation Flatpak Packages ${reset}"
+exec_command flatpak update
 exec_command flatpak install -y flathub org.kde.kate
 exec_command flatpak install -y flathub com.discordapp.Discord
 exec_command flatpak install -y flathub org.chromium.Chromium
