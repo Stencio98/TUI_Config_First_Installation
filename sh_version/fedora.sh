@@ -50,3 +50,5 @@ exec_command flatpak install -y flathub com.valvesoftware.Steam
 exec_command flatpak install -y flathub org.telegram.desktop
 exec_command flatpak install -y flathub com.play0ad.zeroad
 
+echo -e "${bold} Installation complete. Consider rebooting your system. ${reset}"
+
