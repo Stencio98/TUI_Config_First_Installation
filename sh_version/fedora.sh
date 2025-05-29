@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash
+#########!/bin/bash
 
 #variables to make visible the error line
 bold='\e[1m'
