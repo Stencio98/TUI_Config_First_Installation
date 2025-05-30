@@ -41,7 +41,7 @@ exec_command flatpak remote-add --if-not-exists flathub https://dl.flathub.org/r
 echo -e "${bold} Update Flatpak packages ${reset}"
 exec_command flatpak update
 
-echo -e "\n${bold} dnf & flatpak are updated\nDo you want to continue and install additional programs? [y/n] ${reset}"
+echo -e "\n${bold} dnf & flatpak: updated successfully\nDo you want to continue and install additional programs? [y/n] ${reset}"
 read -n1 -s INPUT
 
 if [[ "$INPUT" = "y" || "$INPUT" = "Y" ]]; then
