@@ -1,31 +1,37 @@
-#!/bin/bash
+#!/usr/bin/env bash
+##!/bin/sh
 
 # Variables to make visible the error line
 bold='\e[1m'
 err='\a\033[7m ERROR:'
 reset='\033[0m'
 
-printf "${bold}Welcome to Linux Mint Script Installation${reset}\n"
-printf "${bold}Press [ENTER] to continue...${reset}\n"
-read
-sleep 2
+echo "${bold}Welcome to Linux Mint Script Installation${reset}\n"
+echo "${bold}Press [ENTER] to continue...${reset}\n"
+read INPUT
 
 exec_command () {
     sudo "$@"
     if [ "$?" -ne 0 ]; then
         printf "${err} $@ ${reset}\n"
-        printf "\n${bold}Do you want to QUIT installation now? [y/n]${reset}\n"
-        read -n1 -s INPUT
-        if [[ "$INPUT" = "y" || "$INPUT" = "Y" ]]; then
-            exit 0
+        printf "\n${bold}Do you want to CONTINUE installation now? [y/n]${reset}\n"
+        read INPUT
+        if  [ "$INPUT" = "y" ]; then
+        	echo
+        elif  [ "$INPUT" = "Y" ]; then
+ 			echo
+        else
+        	exit 0	
         fi
-        printf "${bold}Skipping command: $@${reset}\n"
+        	printf "${bold}Skipping command: $@${reset}\n\n"
+        	sleep 1
+        
     fi
 }
 
 # Update apt packages
 printf "${bold}Updating apt packages...${reset}\n"
-exec_command apt-get clean
+exec_command apt-get cleanf
 exec_command apt-get update -y
 exec_command apt-get dist-upgrade -y
 exec_command apt-get autoremove -y
@@ -52,6 +58,7 @@ if [[ "$INPUT" = "y" || "$INPUT" = "Y" ]]; then
     exec_command flatpak install -y flathub com.jetbrains.IntelliJ-IDEA-Community
     exec_command flatpak install -y flathub com.google.AndroidStudio
     exec_command flatpak install -y flathub com.github.IsmaelMartinez.teams_for_linux
+    exec_command flatpak install -y flathub com.visualstudio.code
     exec_command flatpak install -y flathub com.spotify.Client
     exec_command flatpak install -y flathub com.valvesoftware.Steam
     exec_command flatpak install -y flathub org.telegram.desktop
