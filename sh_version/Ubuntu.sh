@@ -1,13 +1,12 @@
-#!/usr/bin/env bash
-
+#!/bin/bash
+#sudo bash Ubuntu.sh
 bold='\e[1m'
 err='\a\033[7m ERROR:'
 reset='\033[0m'
 
-echo -e "${bold} Welcome to Ubuntu Script Installation ${reset}"
-echo -n -e "${bold} Press [ENTER] to continue... ${reset}"
+printf "%b Welcome to Ubuntu Script Installation %b\n" "\$bold" "\$reset"
+printf "%b Press [ENTER] to continue... %b" "\$bold" "\$reset"
 read
-sleep 2
 
 function exec_command(){
     sudo "$@"
@@ -31,25 +30,17 @@ exec_command apt autoclean -y
 echo -e "${bold} APT: System updated and cleaned successfully. ${reset}"
 
 echo -e "${bold} Checking Snap installation ${reset}"
-if ! command -v snap &> /dev/null; then
-    echo -e "${bold} Installing snapd ${reset}"
-    exec_command apt install -y snapd
-else
-    echo -e "${bold} Snap is already installed. ${reset}"
-fi
+exec_command apt install -y snapd
 
-# Aggiornamento Snap
 echo -e "${bold} Updating Snap packages ${reset}"
 exec_command snap refresh
 
-# Conferma installazione extra
 echo -e "\n${bold} APT & Snap are updated.\nDo you want to continue and install additional programs? [y/n] ${reset}"
 read -n1 -s INPUT
 
 if [[ "$INPUT" = "y" || "$INPUT" = "Y" ]]; then
     echo -e "${bold} Installing Snap and APT packages.. ${reset}"
 
-    # Installazioni via Snap
     exec_command snap install code --classic
     exec_command snap install discord
     exec_command snap install chromium
@@ -58,10 +49,12 @@ if [[ "$INPUT" = "y" || "$INPUT" = "Y" ]]; then
     exec_command snap install telegram-desktop
     exec_command snap install spotify
     exec_command snap install steam
-    exec_command snap install gedit
     exec_command snap install 0ad
 
     # Installazioni via APT
+    exec_command apt install gedit
+    exec_command apt install gedit-plugins
+    exec_command apt install psensor
 fi
 
 echo -e "${bold} Installation complete. Consider rebooting your system. ${reset}"
