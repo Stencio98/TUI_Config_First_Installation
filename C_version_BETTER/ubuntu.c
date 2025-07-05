@@ -28,21 +28,9 @@ int main() {
     printf("\033[1mto upgrade version of operative system (for example from ubuntu 22 to ubuntu 24):\nsudo do-release-upgrade\033[0m\n");
 
     printf("\033[1mUpdating snap packages...\033[0m\n");
-
+    if (exec_command("sudo snap refresh") != 0) return 1;
     printf("\033[1mUpdate completed.\033[0m\n");
     
-#ifdef INSTALLATION
-    const char* list[] = {
-    	"discord (snapd)",
-    	"telegram (snapd)",
-    	"steam (snapd)",
-    	"spotify (snapd)",
-    	"virtualbox (apt)",
-    	
-    	
-    }
-#else
-#endif
     return 0;
 
 }
